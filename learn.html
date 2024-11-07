@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - F2F: Fields2Future</title>
+    <link rel="stylesheet" type="text/css" href="pj.css">
+    <style>
+        body.learn {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        #searchBar {
+            padding: 10px;
+            width: calc(100% - 120px);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #searchBtn {
+            padding: 10px;
+            border: none;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        #searchBtn:hover {
+            background-color: #4cae4c;
+        }
+        #videoContainer {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .video {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: white;
+            width: 300px;
+        }
+    </style>
+</head>
+<body class="learn">
+    <h1>Find Your Course</h1>
+    <div>
+        <input type="text" id="searchBar" placeholder="Search for a course..." />
+        <button id="searchBtn">Search</button>
+    </div>
+
+    <h2>Related Videos</h2>
+    <div id="videoContainer"></div>
+
+    <script src="learn.js" defer></script>
+    <script>
+        document.getElementById('searchBtn').addEventListener('click', function() {
+            const query = document.getElementById('searchBar').value;
+            const videoContainer = document.getElementById('videoContainer');
+            videoContainer.innerHTML = ''; // Clear previous results
+
+            // Simulate fetching videos related to the query
+            const videos = [
+                { title: "Course on Rural Development", link: "#" },
+                { title: "Vocational Training Basics", link: "#" },
+                { title: "Skills for Modern Agriculture", link: "#" },
+            ];
+
+            videos.forEach(video => {
+                const videoDiv = document.createElement('div');
+                videoDiv.className = 'video';
+                videoDiv.innerHTML = `<h3>${video.title}</h3><a href="${video.link}">Watch Video</a>`;
+                videoContainer.appendChild(videoDiv);
+            });
+        });
+    </script>
+</body>
+</html>
+

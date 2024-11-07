@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talk to Ai</title>
+    <link rel="stylesheet" type="text/css" href="pj.css">
+    <style>
+        body {
+            background-color: #1407ce; /* Example background color */
+            color: white;
+        }
+        button {
+            background-color: #fff; /* Button color */
+            color: #1407ce; /* Text color */
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #f2f2f2; /* Hover effect */
+        }
+    </style>
+</head>
+
+<body class="contact">
+    <h1 style="text-align: center;">Talk to Ai</h1>
+
+    <div style="text-align: center; margin-top: 50px;">
+        <button id="continueBtn" aria-label="Continue to AI Assistant">Continue</button>
+        <button id="exitBtn" aria-label="Exit to Home" onclick="confirmExit()">Exit</button>
+    </div>
+
+    <script>
+        document.getElementById("continueBtn").addEventListener("click", function() {
+            window.location.href = "https://dashboard.vapi.ai/assistants/b10918de-ca55-4e2f-9927-792534196502";
+        });
+
+        function confirmExit() {
+            if (confirm("Are you sure you want to exit?")) {
+                window.location.href = "home.html";
+            }
+        }
+    </script>
+</body>
+
+</html>

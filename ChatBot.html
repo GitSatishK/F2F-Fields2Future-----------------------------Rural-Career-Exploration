@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fields2Future - Set Your Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="pj.css">
+</head>
+
+<body style="font-family: 'Roboto', sans-serif; background-color: #f4f4f4;">
+    <!-- Navigation Bar -->
+    <nav>
+        <ul style="list-style-type:none; padding:0; margin:0; display:flex; background-color:#1407ce;">
+            <li style="flex:1;"><a href="home.html" style="display:block; color:white; text-align:center; padding:14px 20px; text-decoration:none;">Home</a></li>
+            <li style="flex:1;"><a href="about.html" style="display:block; color:white; text-align:center; padding:14px 20px; text-decoration:none;">About Us</a></li>
+            <li style="flex:1;"><a href="contact.html" style="display:block; color:white; text-align:center; padding:14px 20px; text-decoration:none;">Contact Us</a></li>
+            <li style="flex:1;"><a href="TalktoAi.html" style="display:block; color:white; text-align:center; padding:14px 20px; text-decoration:none;">Talk to Ai</a></li>
+            <li style="flex:1;"><a href="ChatBot.html" style="display:block; color:white; text-align:center; padding:14px 20px; text-decoration:none;">Text to ChatBot</a></li>
+        </ul>
+    </nav>
+
+    <h1 style="text-align:center; margin-top:30px; color:#333;">Fields2Future - Set Your Future</h1>
+
+    <div id="chat-container" style="width:100%; max-width:600px; margin:20px auto; padding:20px; border:1px solid #ccc; border-radius:10px; background-color:#ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <div id="chat-box" style="height:300px; overflow-y:auto; border:1px solid #ccc; padding:10px; background-color:white; border-radius:5px;"></div>
+
+        <form id="chatForm" style="display:flex; margin-top:10px;">
+            <input type="text" id="userInput" style="flex:1; padding:10px; border-radius:5px; border:1px solid #ccc; font-size:1em;" placeholder="Ask a question about your career..." required>
+            <input type="submit" value="Send" style="background-color:#c90526; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer; margin-left:10px; transition: background-color 0.3s ease;">
+        </form>
+    </div>
+
+    <script src="chatbot.js" defer></script>
+</body>
+
+</html>
